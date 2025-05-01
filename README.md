@@ -73,4 +73,4 @@ npm run build
 
 ---
 
-✏ **Autor:** Tu equipo de desarrollo 🚀  
+✏ **Autor:** BlauCorp Team 🚀  
