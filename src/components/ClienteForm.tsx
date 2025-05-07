@@ -125,22 +125,22 @@ const ClienteForm: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-blue-50 flex items-center justify-center p-6 relative">
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-blue-50 flex items-center justify-center px-3 py-7 relative">
       {loading && (
         <div className="absolute inset-0 bg-white bg-opacity-70 flex flex-col items-center justify-center z-50">
           <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-600 border-solid"></div>
           <p className="mt-4 text-blue-700 font-semibold">Registrando cliente...</p>
         </div>
       )}
-      <form onSubmit={handleSubmit} className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl p-10 space-y-10">
+      <form onSubmit={handleSubmit} className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl px-3 py-7 space-y-10">
         <h2 className="text-4xl font-extrabold text-center text-blue-800 mb-6">
           📄 Registro de Clientes 2025
         </h2>
 
-        <div className="bg-white border border-blue-300 p-6 rounded-2xl shadow-md space-y-6">
+        <div className="bg-white border border-blue-300 px-2 py-6 rounded-2xl shadow-md space-y-6">
           <h3 className="text-xl font-semibold text-blue-700">🧾 Datos Generales</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <input name="razonSocial" placeholder="Nombre o Razón Social" required onChange={handleChange} className="border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" value={formData.razonSocial} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+            <input name="razonSocial" placeholder="Nombre o Razón Social" required onChange={handleChange} className="border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 " value={formData.razonSocial} />
             <input name="representanteLegal" placeholder="Representante Legal" required onChange={handleChange} className="border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" value={formData.representanteLegal} />
             <input name="numeroEscritura" placeholder="Núm. de Escritura Pública" required onChange={handleChange} className="border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" value={formData.numeroEscritura} />
             
