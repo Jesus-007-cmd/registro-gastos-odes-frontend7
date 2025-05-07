@@ -118,15 +118,15 @@ const RegistrosList: React.FC = () => {
           return (
             <div
               key={idx}
-              className="bg-white rounded-xl shadow-lg border border-blue-300 p-6 space-y-4 md:grid md:grid-cols-2 md:gap-8"
+              className="bg-white rounded-xl shadow-lg border border-blue-300 p-4  md:grid md:grid-cols-2 md:gap-8"
             >
               {/* Columna izquierda */}
-              <div className="flex flex-col justify-between h-full space-y-2">
-                <h3 className="text-2xl font-semibold text-blue-700 mb-2">
+              <div className="flex flex-col justify-between  space-y-2">
+              <h3 className="text-xl md:text-2xl font-semibold text-blue-700 mb-2">
                   {detalle?.razonSocial || 'Sin datos principales'}
                 </h3>
                 {detalle ? (
-                  <div className="bg-gray-50 p-4 rounded space-y-1 text-sm h-full">
+                   <div className="bg-gray-50 rounded  text-sm">
                     <p><strong className="text-blue-600">👤 Representante Legal:</strong> {detalle.representanteLegal}</p>
                     <p><strong className="text-blue-600">📑 Número Escritura:</strong> {detalle.numeroEscritura}</p>
                     <p><strong className="text-blue-600">📅 Fecha de registro de escritura pública:</strong> {detalle.fechaEscritura}</p>
