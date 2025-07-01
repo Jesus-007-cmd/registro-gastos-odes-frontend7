@@ -1,48 +1,32 @@
-import React, { useState } from 'react';
-import ClienteForm from './components/ClienteForm';
-import RegistrosList from './components/RegistroList';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import DashboardAdmin from './pages/admin/DashboardAdmin';
+import BancosPage from './pages/admin/BancosPage';
+import ProveedoresPage from './pages/admin/ProveedoresPage';
+import OdesPage from './pages/admin/OdesPage';
+import GastosPage from './pages/admin/GastosPage';
+import ReportesPage from './pages/admin/ReportesPage';
+import Sidebar from './components/Sidebar';
 
-const App: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'form' | 'list'>('form');
-
+function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 via-white to-gray-200">
-      <header className="bg-blue-700 text-white p-4 flex justify-between items-center shadow-md">
-        <h1 className="text-2xl font-bold">📋 Registro Clientes 2025</h1>
-        <div className="space-x-4">
-          <button
-            onClick={() => setActiveTab('form')}
-            className={`px-4 py-2 rounded-lg font-semibold transition ${
-              activeTab === 'form'
-                ? 'bg-white text-blue-700'
-                : 'bg-blue-600 hover:bg-blue-500'
-            }`}
-          >
-            ➕ Nuevo Registro
-          </button>
-          <button
-            onClick={() => setActiveTab('list')}
-            className={`px-4 py-2 rounded-lg font-semibold transition ${
-              activeTab === 'list'
-                ? 'bg-white text-blue-700'
-                : 'bg-blue-600 hover:bg-blue-500'
-            }`}
-          >
-            📂 Ver Registros
-          </button>
-        </div>
-      </header>
+    <BrowserRouter>
+  <div className="min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/images/main-background.webp')" }}>
+  <Sidebar />
+  <main className="md:ml-[220px] p-4">
+      <Routes>
+      <Route path="/" element={<Navigate to="/admin" />} />
+      <Route path="/admin" element={<DashboardAdmin />} />
+      <Route path="/admin/bancos" element={<BancosPage />} />
+      <Route path="/admin/odes" element={<OdesPage />} />
+      <Route path="/admin/proveedores" element={<ProveedoresPage />} />
+      <Route path="/admin/gastos" element={<GastosPage />} />
+      <Route path="/admin/reportes" element={<ReportesPage />} />
+      </Routes>
+    </main>
+  </div>
+</BrowserRouter>
 
-      <main className="p-6">
-        {activeTab === 'form' && <ClienteForm />}
-        {activeTab === 'list' && <RegistrosList />}
-      </main>
-
-      <footer className="bg-blue-700 text-white text-center py-3 mt-10">
-        © 2025 Registro Clientes — Creado con ❤️ por tu equipo
-      </footer>
-    </div>
   );
-};
+}
 
 export default App;
