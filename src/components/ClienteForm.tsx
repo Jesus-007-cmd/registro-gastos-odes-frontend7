@@ -139,7 +139,7 @@ const ClienteForm: React.FC = () => {
 
         <div className="bg-white border border-blue-300 px-2 py-6 rounded-2xl shadow-md space-y-6">
           <h3 className="text-xl font-semibold text-blue-700">🧾 Datos Generales</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
             <input name="razonSocial" placeholder="Nombre o Razón Social" required onChange={handleChange} className="border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 " value={formData.razonSocial} />
             <input name="representanteLegal" placeholder="Representante Legal" required onChange={handleChange} className="border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" value={formData.representanteLegal} />
             <input name="numeroEscritura" placeholder="Núm. de Escritura Pública" required onChange={handleChange} className="border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" value={formData.numeroEscritura} />
@@ -165,7 +165,7 @@ const ClienteForm: React.FC = () => {
             <input type="email" name="correo" placeholder="Correo Electrónico" required onChange={handleChange} className="border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" value={formData.correo} />
             <input name="telefono" placeholder="Teléfono" required onChange={handleChange} className="border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" value={formData.telefono} />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <textarea name="domicilioFiscal" placeholder="Domicilio Fiscal" required onChange={handleChange} className="border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" value={formData.domicilioFiscal} />
             <textarea name="domiciliosServicio" placeholder="Domicilios de Servicio" required onChange={handleChange} className="border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" value={formData.domiciliosServicio} />
           </div>

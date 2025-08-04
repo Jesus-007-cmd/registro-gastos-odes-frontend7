@@ -136,10 +136,8 @@ const GastosPage: React.FC = () => {
             : 'N/A';
 
     return (
-        <div
-            className="p-6 md:ml-[220px] bg-cover bg-center min-h-screen"
-            style={{ backgroundImage: "url('/tu-fondo.jpg')" }}
-        >
+        <div className="w-full p-6 md:ml-[220px] bg-cover bg-center min-h-screen">
+
             <h2 className="text-4xl font-extrabold text-white drop-shadow-lg mb-4">
                 Registrar Gasto
             </h2>
@@ -163,6 +161,7 @@ const GastosPage: React.FC = () => {
             >
                 {/* Selecciones y fecha */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
                     {/* OdeS */}
                     <div>
                         <label className="block text-sm font-semibold text-gray-700 mb-1">OdeS</label>
@@ -251,6 +250,7 @@ const GastosPage: React.FC = () => {
 
                 {/* Archivos */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
                     {['factura', 'comprobante', 'evidencia'].map(name => (
                         <div key={name}>
                             <label className="block text-sm font-semibold text-gray-700 mb-1 capitalize">

@@ -111,7 +111,7 @@ const BancosPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="p-6 md:ml-[220px]">
+    <div className="w-full p-4 sm:p-6 md:ml-[220px]">
       <h2 className="text-3xl font-bold text-white mb-6">Registrar Cuenta / Banco</h2>
 
       {errorMsg && (
@@ -157,7 +157,7 @@ const BancosPage: React.FC = () => {
         </button>
       </form>
 
-      <div className="mt-10 max-w-xl mx-auto">
+      <div className="mt-10 max-w-xl w-full mx-auto">
         <h3 className="text-xl font-semibold text-white mb-4">Cuentas Registradas</h3>
 
         {loading && <p className="text-white">Cargando bancos…</p>}
@@ -201,7 +201,8 @@ const BancosPage: React.FC = () => {
                 <>
                   <p><strong>🏦 Banco:</strong> {banco.nombre}</p>
                   <p><strong>🔢 Cuenta:</strong> {banco.cuenta}</p>
-                  <div className="mt-2 flex gap-2">
+                  <div className="mt-2 flex flex-wrap gap-2">
+
                     <button
                       onClick={() => startEdit(banco)}
                       className="px-3 py-1 bg-yellow-500 hover:bg-yellow-600 text-white rounded"

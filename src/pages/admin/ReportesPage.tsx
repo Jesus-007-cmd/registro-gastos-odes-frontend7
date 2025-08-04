@@ -121,11 +121,11 @@ const ReportesPage: React.FC = () => {
   }, [totalesPorOdeS]);
 
   return (
-    <div className="p-6 md:ml-[220px]">
+    <div className="w-full p-4 sm:p-6 md:ml-[220px]">
       <h2 className="text-3xl font-bold text-white mb-6">Reportes de Gastos</h2>
 
       <div className="bg-white/80 p-6 rounded-xl shadow-md max-w-xl mx-auto mb-8 space-y-4">
-        <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <label>
             Desde: <input type="date" value={desde} onChange={e => setDesde(e.target.value)} className="border rounded px-2 py-1" />
           </label>
@@ -139,7 +139,7 @@ const ReportesPage: React.FC = () => {
         {error && <p className="text-red-600">{error}</p>}
       </div>
 
-      <div className="space-y-10 max-w-3xl mx-auto text-gray-100">
+      <div className="space-y-10 max-w-3xl w-full mx-auto text-gray-100">
         <section>
           <h3 className="text-2xl mb-2">Total gastado por Banco</h3>
           <ul className="list-disc list-inside">
@@ -160,6 +160,7 @@ const ReportesPage: React.FC = () => {
 
         <section>
           <h3 className="text-2xl mb-2">Detalles por OdeS</h3>
+          <div className="overflow-x-auto">
           <table className="w-full table-auto border-collapse text-gray-900">
             <thead>
               <tr>
@@ -180,6 +181,7 @@ const ReportesPage: React.FC = () => {
               ))}
             </tbody>
           </table>
+          </div>
         </section>
 
         <section>

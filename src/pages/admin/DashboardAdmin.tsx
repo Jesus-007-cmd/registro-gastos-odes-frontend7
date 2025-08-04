@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 
 export default function DashboardAdmin() {
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
+    <div className="min-h-screen w-full bg-gray-100 p-4 sm:p-6">
+
       <h1 className="text-3xl font-bold mb-6 text-center">Panel de Administración</h1>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
         <Link to="/admin/bancos" className="bg-white p-6 rounded shadow hover:bg-blue-100">
           <h2 className="text-xl font-semibold">🏦 Cuentas/Bancos</h2>
           <p className="text-gray-600">Registrar bancos o tarjetas desde los que se pagan los gastos.</p>
@@ -31,6 +33,11 @@ export default function DashboardAdmin() {
           <h2 className="text-xl font-semibold">📊 Reportes</h2>
           <p className="text-gray-600">Ver gastos por fecha, banco, proveedor u OdeS.</p>
         </Link>
+        <Link to="/admin/gasto-form" className="bg-white p-6 rounded shadow hover:bg-indigo-100">
+          <h2 className="text-xl font-semibold">📝 Nuevo Gasto</h2>
+          <p className="text-gray-600">Registrar gasto con archivos y evidencia.</p>
+        </Link>
+
       </div>
     </div>
   );

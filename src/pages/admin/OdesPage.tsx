@@ -81,7 +81,8 @@ const OdesPage: React.FC = () => {
     };
 
     return (
-        <div className="p-6 md:ml-[220px]">
+        <div className="w-full p-4 sm:p-6 md:ml-[220px]">
+
             <h2 className="text-3xl font-bold text-white mb-6">Gestión de OdeS</h2>
 
             <form onSubmit={agregarOde} className="bg-white/80 p-6 rounded-xl space-y-4 max-w-xl mx-auto">
@@ -108,7 +109,8 @@ const OdesPage: React.FC = () => {
                 <button className="bg-blue-800 text-white px-4 py-2 rounded">➕ Agregar OdeS</button>
             </form>
 
-            <ul className="mt-10 space-y-3 max-w-xl mx-auto">
+            <ul className="mt-10 space-y-3 max-w-xl w-full mx-auto">
+
                 {odes.map(o => (
                     <li key={o.id} className="bg-white/80 p-4 rounded-lg">
                         {editingId === o.id ? (
@@ -124,7 +126,8 @@ const OdesPage: React.FC = () => {
                                     value={editMontoCobrar}
                                     onChange={e => setEditMontoCobrar(+e.target.value)}
                                 />
-                                <div className="flex gap-2">
+                                <div className="flex flex-wrap gap-2 mt-2">
+
                                     <button onClick={saveEdit} className="bg-green-600 text-white px-3 py-1 rounded">💾 Guardar</button>
                                     <button onClick={cancelEdit} className="bg-gray-500 text-white px-3 py-1 rounded">✖️ Cancelar</button>
                                 </div>
@@ -133,7 +136,8 @@ const OdesPage: React.FC = () => {
                             <>
                                 <p><strong>OdeS:</strong> {o.numero}</p>
                                 <p><strong>Monto:</strong> ${o.montoCobrar}</p>
-                                <div className="flex gap-2 mt-2">
+                                <div className="flex flex-wrap gap-2 mt-2">
+
                                     <button onClick={() => startEdit(o)} className="bg-yellow-500 text-white px-3 py-1 rounded">✏️ Editar</button>
                                     <button onClick={() => eliminarOde(o.id)} className="bg-red-600 text-white px-3 py-1 rounded">🗑️ Eliminar</button>
                                     <button

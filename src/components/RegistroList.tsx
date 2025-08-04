@@ -106,7 +106,7 @@ const RegistrosList: React.FC = () => {
   }
 
   return (
-    <div className="p-6">
+    <div className="w-full p-4 sm:p-6">
       <h2 className="text-3xl font-bold mb-6 text-center text-blue-800">📋 Registros Detallados</h2>
       <div className="grid grid-cols-1 gap-8">
         {registros.map((registro, idx) => {
@@ -118,7 +118,7 @@ const RegistrosList: React.FC = () => {
           return (
             <div
               key={idx}
-              className="bg-white rounded-xl shadow-lg border border-blue-300 p-4  md:grid md:grid-cols-2 md:gap-8"
+              className="w-full bg-white rounded-xl shadow-lg border border-blue-300 p-4  md:grid md:grid-cols-2 md:gap-8"
             >
               {/* Columna izquierda */}
               <div className="flex flex-col justify-between  space-y-2">

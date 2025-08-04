@@ -33,11 +33,11 @@ const MaramesaLogoTransparent: React.FC<{ className?: string }> = ({ className =
         `}
       </style>
 
-      <div className="logo-container text-white font-extrabold text-3xl tracking-wide leading-tight">
+      <div className="logo-container text-white font-extrabold text-2xl sm:text-3xl tracking-wide leading-tight">
         <div className="flex flex-col">
           <span className="block leading-none">MARAMESA</span>
           <div className="flex items-center gap-2 mt-1">
-            <div className="line w-24"></div>
+          <div className="line w-16 sm:w-24"></div>
             <span className="text-sm italic font-semibold whitespace-nowrap">GROUP</span>
           </div>
         </div>
